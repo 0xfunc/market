@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.market">
+    package="com.0xfunc.parasol">
    <application
-        android:label="market"
+        android:label="Parasol"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
