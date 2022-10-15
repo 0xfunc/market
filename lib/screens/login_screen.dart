@@ -25,14 +25,14 @@ class LoginScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Welcome',
+              'Welcome to Parousol',
               style: TextStyle(
                 fontSize: getProportionateScreenHeight(24.0),
                 fontWeight: FontWeight.w500,
               ),
             ),
             Text(
-              'We do not judge what you buy and sell',
+              "Nahh, we won't judge! Feel free to buy and sell whatever you like.",
               style: TextStyle(
                   color: kDarkGrayColor,
                   fontSize: getProportionateScreenHeight(14.0),
@@ -48,22 +48,13 @@ class LoginScreen extends StatelessWidget {
             SizedBox(
               height: getProportionateScreenHeight(10.0),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text(
-                  "Don't have an account?",
-                  style: TextStyle(
-                      color: kDarkGrayColor,
-                      fontSize: getProportionateScreenHeight(14.0),
-                      fontWeight: FontWeight.w500),
-                ),
-                CustomTextButton(
-                    text: 'Sign up',
-                    fontSize: getProportionateScreenHeight(14.0),
-                    color: kPrimaryBlackColor,
-                    onPressed: () {})
-              ],
+            Spacer(),
+            Text(
+              "By clicking 'Continue with Google' above, you acknowledge that you have read and understood, and agree to Parousol's Terms & Conditions and Privacy Policy.",
+              style: TextStyle(
+                  color: kDarkGrayColor,
+                  fontSize: getProportionateScreenHeight(14.0),
+                  fontWeight: FontWeight.w500),
             )
           ],
         ),
