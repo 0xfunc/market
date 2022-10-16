@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:market/routes.dart';
+import 'package:market/screens/wrapper.dart';
 import 'package:market/theme.dart';
-import 'screens/login_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Parousol',
       theme: theme(),
-      initialRoute: LoginScreen.routeName,
+      initialRoute: Wrapper.routeName,
       routes: routes,
       debugShowCheckedModeBanner: false,
     );

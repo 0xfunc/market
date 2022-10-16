@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:market/constants.dart';
-import 'package:market/shared/custom_text_button.dart';
+import 'package:market/screens/home/home_screen.dart';
 import 'package:market/shared/default_button.dart';
 import 'package:market/size_config.dart';
 
@@ -11,19 +11,22 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Query screen dimension of device on starting screen
-    SizeConfig().init(context);
-
     return Scaffold(
       appBar: AppBar(),
       body: Padding(
         padding: EdgeInsets.symmetric(
           horizontal: getProportionateScreenWidth(20.0),
-          vertical: getProportionateScreenHeight(40.0),
+          vertical: getProportionateScreenHeight(35.0),
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            // Beach umbrella emoji icon
+            Image.network(
+              'https://img.icons8.com/emoji/344/beach-with-umbrella.png',
+              height: getProportionateScreenHeight(73.0),
+              width: getProportionateScreenWidth(73.0),
+            ),
             Text(
               'Welcome to Parousol',
               style: TextStyle(
@@ -34,16 +37,22 @@ class LoginScreen extends StatelessWidget {
             Text(
               "Nahh, we won't judge! Feel free to buy and sell whatever you like.",
               style: TextStyle(
-                  color: kDarkGrayColor,
-                  fontSize: getProportionateScreenHeight(14.0),
-                  fontWeight: FontWeight.w500),
+                color: kDarkGrayColor,
+                fontSize: getProportionateScreenHeight(16.0),
+                fontWeight: FontWeight.w500,
+              ),
             ),
             SizedBox(
               height: getProportionateScreenHeight(100.0),
             ),
+            // Google Login Button
             DefaultIconButton(
               text: 'Continue with Google',
-              onPressed: () {},
+              image: 'https://freesvg.org/img/1534129544.png',
+              onPressed: () => Navigator.pushNamed(
+                context,
+                HomeScreen.routeName,
+              ),
             ),
             SizedBox(
               height: getProportionateScreenHeight(10.0),
@@ -52,9 +61,10 @@ class LoginScreen extends StatelessWidget {
             Text(
               "By clicking 'Continue with Google' above, you acknowledge that you have read and understood, and agree to Parousol's Terms & Conditions and Privacy Policy.",
               style: TextStyle(
-                  color: kDarkGrayColor,
-                  fontSize: getProportionateScreenHeight(14.0),
-                  fontWeight: FontWeight.w500),
+                color: kDarkGrayColor,
+                fontSize: getProportionateScreenHeight(14.0),
+                fontWeight: FontWeight.w500,
+              ),
             )
           ],
         ),
